@@ -1,5 +1,5 @@
 # Noted
-A markdown app which allows you to take down notes with a live preview, the toggle button is just added for now it doesnt work but the theme works based on user system preference.
+a beautifully designed task management application with a Vue.js frontend and Express backend. This MVP will focus on essential functionality while maintaining a clean, professional design inspired by mordern aesthetic principles.
 
 # More Function will added soon!
 - Downloadable files
