@@ -1,0 +1,311 @@
+:root {
+  --primary-color: #6C63FF;         /* soft indigo */
+  --primary-light: #D6D4FF;
+  --primary-dark: #514BC1;
+
+  --secondary-color: #FFB6B9;       /* light coral pink */
+  --secondary-light: #FFD6D8;
+  --secondary-dark: #D9888C;
+
+  --accent-color: #FFDAC1;          /* peach */
+  --accent-light: #FFF1E8;
+  --accent-dark: #E9B69A;
+
+  --success-color: #A0E7E5;         /* soft teal */
+  --warning-color: #FFCB77;         /* warm yellow */
+  --error-color: #FF6B6B;           /* bright coral */
+
+  --text-primary: #2D2D2D;
+  --text-secondary: #4F4F4F;
+  --text-tertiary: #757575;
+
+  --bg-primary: #FAFAFA;
+  --bg-secondary: #FFFFFF;
+  --bg-tertiary: #F0F0F0;
+
+  --border-color: #E0E0E0;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+
+  --transition-speed: 0.2s;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.dark-mode {
+  --primary-color: #6B7CFF;
+  --primary-light: #8B9AFF;
+  --primary-dark: #4A5BD9;
+  --secondary-color: #48BB78;
+  --secondary-light: #68D391;
+  --secondary-dark: #38A169;
+  --accent-color: #F6AD55;
+  --accent-light: #FBD38D;
+  --accent-dark: #ED8936;
+  --text-primary: #F7FAFC;
+  --text-secondary: #E2E8F0;
+  --text-tertiary: #CBD5E0;
+  --bg-primary: #1A202C;
+  --bg-secondary: #2D3748;
+  --bg-tertiary: #4A5568;
+  --border-color: #4A5568;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Avoid system preference */
+@media (prefers-color-scheme: dark) {
+  /* Remove or keep this empty */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: inherit;
+  transition: color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--primary-light);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: var(--spacing-4);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin-bottom: var(--spacing-4);
+}
+
+button {
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  padding: var(--spacing-2) var(--spacing-4);
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  transition: background-color var(--transition-speed), border-color var(--transition-speed);
+}
+
+button:hover {
+  background-color: var(--primary-dark);
+}
+
+button:focus, button:focus-visible {
+  outline: 2px solid var(--primary-light);
+  outline-offset: 2px;
+}
+
+button.secondary {
+  background-color: var(--secondary-color);
+}
+
+button.secondary:hover {
+  background-color: var(--secondary-dark);
+}
+
+button.accent {
+  background-color: var(--accent-color);
+}
+
+button.accent:hover {
+  background-color: var(--accent-dark);
+}
+
+button.ghost {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+button.ghost:hover {
+  background-color: var(--bg-tertiary);
+}
+
+input, textarea {
+  width: 100%;
+  padding: var(--spacing-3);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color var(--transition-speed);
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.card {
+  background-color: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-6);
+  transition: box-shadow var(--transition-speed);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+#app {
+  width: 100%;
+  margin: 0 auto;
+  transition: all var(--transition-speed);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light-mode) {
+    --primary-color: #6B7CFF;
+    --primary-light: #8B9AFF;
+    --primary-dark: #4A5BD9;
+    --secondary-color: #48BB78;
+    --secondary-light: #68D391;
+    --secondary-dark: #38A169;
+    --accent-color: #F6AD55;
+    --accent-light: #FBD38D;
+    --accent-dark: #ED8936;
+    --text-primary: #F7FAFC;
+    --text-secondary: #E2E8F0;
+    --text-tertiary: #CBD5E0;
+    --bg-primary: #1A202C;
+    --bg-secondary: #2D3748;
+    --bg-tertiary: #4A5568;
+    --border-color: #4A5568;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  :root {
+    --spacing-6: 1rem;
+    --spacing-8: 1.5rem;
+    --spacing-10: 2rem;
+    --spacing-12: 2.5rem;
+  }
+  
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+  }
+  
+  #app {
+    padding: var(--spacing-4);
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity var(--transition-speed);
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Animation for note cards */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.note-card {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Code highlighting styles */
+pre {
+  background-color: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-4);
+  overflow-x: auto;
+  margin-bottom: var(--spacing-4);
+}
+
+code {
+  font-family: 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  font-size: 0.9em;
+  padding: 0.2em 0.4em;
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-tertiary);
+}
+
+pre code {
+  padding: 0;
+  background-color: transparent;
+}
