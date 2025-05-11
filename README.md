@@ -15,3 +15,5 @@ A markdown app which allows you to take down notes with a live preview, the togg
 - Express
 - Vue.js
 - Marked.js
+
+To use it simply install the zip file and first run the npm install command in the terminal then run npm run dev then you should be able to use it.
