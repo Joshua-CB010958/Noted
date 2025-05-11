@@ -1,5 +1,5 @@
 # Noted
-a beautifully designed task management application with a Vue.js frontend and Express backend. This MVP will focus on essential functionality while maintaining a clean, professional design inspired by mordern aesthetic principles.
+I designed a markdown note-taking application with a clean, responsive interface. The app features a split-pane editor with live Markdown preview using Marked.js, syntax highlighting for code blocks, and automatic note saving. The backend is implemented with Express and stores notes in a simple JSON file.
 
 # More Function will added soon!
 - Downloadable files
